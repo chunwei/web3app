@@ -1,0 +1,6 @@
+{
+  "name": "cube-0",
+  "description": "A cube zero of NFE Cubes",
+  "image": "ipfs://YOUR_ASSET_CID",
+  "attributes": [{ "color": "", "rarity": 0.5 }]
+}
