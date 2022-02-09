@@ -9,7 +9,15 @@ const contractAddress = '0xeF782aaFD7aD31f05efF9057CA0F969827460CdF'; //YOUR_DEP
 //'0xe7f1725e7734ce288f8367e1bb143e90bb3f0512';//Localhost
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
-
+// 更改网络事件
+window.ethereum.on('chainChanged', async (walletChainId) => {
+  console.log('Matemask chainChanged', walletChainId)
+  window.location.reload()
+})
+window.ethereum.on('accountsChanged', async (accounts) => {
+  console.log('Matemask accountsChanged', accounts)
+  window.location.reload()
+})
 // get the end user
 const signer = provider.getSigner();
 
